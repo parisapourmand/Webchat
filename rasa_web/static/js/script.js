@@ -37,8 +37,9 @@ function scrollToBottomOfResults() {
 function send(message) {
 	console.log("User Message:", message)
 	$.ajax({
-		url: 'https://rasablog.herokuapp.com/webhooks/rest/webhook',
-		type: 'POST',		
+		// url: 'https://rasablog.herokuapp.com/webhooks/rest/webhook',
+		url: 'http://localhost:5005/webhooks/rest/webhook',
+		type: 'POST',
 		data: JSON.stringify({
 			"message": message,
 			"sender": "username"

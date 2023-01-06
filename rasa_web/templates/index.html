@@ -1,47 +1,40 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
-   <head>
-      <title>Chat Page</title>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link rel= "stylesheet" type= "text/css" href= "{% static 'css/style.css' %}">
-      <!--Main css-->
-      <link rel= "stylesheet" type= "text/css" href= "{% static 'css/materialize.min.css' %}">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   </head>
-   <body>
-      <div class="container">
-         <div class="widget">
-            <div class="chat_header">
-               <!--Add the name of the bot here -->
-               <span style="color:white;margin-left: 5px;">ParisaBot</span>
-               <span style="color:white;margin-right: 5px;float:right;margin-top: 5px;" id="close">
-               <i class="material-icons">close</i>
-               </span>
-            </div>
-            <!--Chatbot contents goes here -->
-            <div class="chats" id="chats">
-               <div class="clearfix"></div>
-            </div>
-            <!--user typing indicator -->
-            <div class="keypad" >
-               <input type="text" id="keypad" class="usrInput browser-default" placeholder="Type a message..." autocomplete="off">
-            </div>
-         </div>
-         <!--bot widget -->
-         <div class="profile_div" id="profile_div">
-            <img class="imgProfile" src="{% static 'img/botAvatar.png' %}"/>
-         </div>
-      </div>
-      <!--JavaScript at end of body for optimized loading-->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script type="text/javascript" src="{% static 'js/materialize.min.js'  %}"></script>
-      <!--Main Script -->
-      <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
-   </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="application/javascript">
+        window.tiledeskSettings =
+            {
+                projectid: "63b813db272397001cd978a1"
+            };
+        (function (d, s, id) {
+            var w = window;
+            var d = document;
+            var i = function () {
+                i.c(arguments);
+            };
+            i.q = [];
+            i.c = function (args) {
+                i.q.push(args);
+            };
+            w.Tiledesk = i;
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.async = true;
+            js.src = "http://localhost:8081/widget/launch.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'tiledesk-jssdk'));
+    </script>
+
+</head>
+<body>
+
+</body>
 </html>

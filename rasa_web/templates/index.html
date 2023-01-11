@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,6 +31,17 @@
             js.src = "http://localhost:8081/widget/launch.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'tiledesk-jssdk'));
+    </script>
+
+    <script>
+        function logout(){
+            for (let i = 0; i < localStorage.length; i++) {
+                if(localStorage.key(i).startsWith("widget")){
+                    localStorage.removeItem(localStorage.key(i));
+                    i -= 1;
+                }
+            }
+        }
     </script>
 
 </head>

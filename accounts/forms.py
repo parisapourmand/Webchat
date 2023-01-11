@@ -1,6 +1,5 @@
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-
+from django.contrib.auth.forms import AuthenticationForm, UsernameField, UserCreationForm
 
 class SignUpForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
@@ -16,3 +15,9 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = User
         fields = ("username", "first_name", "last_name", "password1", "password2")
+
+class CustomLogInForm(AuthenticationForm):
+    def __init__(self, *args, **kwargs):
+        super(CustomLogInForm, self).__init__(*args, **kwargs)
+        self.fields['username'].label = "نام‌کاربری"
+        self.fields['password'].label = "رمز عبور"

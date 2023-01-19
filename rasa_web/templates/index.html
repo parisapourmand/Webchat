@@ -29,7 +29,7 @@
             js = d.createElement(s);
             js.id = id;
             js.async = true;
-            js.src = "http://localhost:8081/widget/launch.js";
+            js.src = "http://" + "{{ SERVER_ROOT }}" + ":8081/widget/launch.js";
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'tiledesk-jssdk'));
     </script>

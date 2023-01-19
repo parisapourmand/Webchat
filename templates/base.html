@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html dir="rtl">
+<html dir="center">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href= "{{ BASE_DIR }}/static/css/style.css">
   <title>{% block title %}Title{% endblock %}</title>
   <script>
     function logout(){
@@ -15,7 +16,7 @@
     </script>
 </head>
 <body>
-  <main>
+  <main id="box">
     {% block content %}
     {% endblock %}
   </main>

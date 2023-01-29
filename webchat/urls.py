@@ -22,5 +22,5 @@ urlpatterns = [
     path('accounts/', include("accounts.urls")),
     path('accounts/', include("django.contrib.auth.urls")),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
-    path('chat/', include('rasa_web.urls'), name='chat'),
+    path('chat/', include('chat.urls'), name='chat'),
 ]
